@@ -1,5 +1,5 @@
 <?php 
-$file = '../json/audited.json';
+$file = '../../json/audited.json';
 $isi = file_get_contents($file);
 $data= json_decode($isi,true);
 
@@ -11,7 +11,7 @@ $json = json_encode($data,JSON_PRETTY_PRINT);
 file_put_contents($file,$json);
 
 
-$file = '../json/unit_temp.json';
+$file = '../../json/unit_temp.json';
 $isi = file_get_contents($file);
 $data= json_decode($isi,true);
 
@@ -22,7 +22,7 @@ foreach ($data as $key => $val) {
 $json = json_encode($data,JSON_PRETTY_PRINT);
 file_put_contents($file,$json);
 
-$file = '../json/audit.json';
+$file = '../../json/audit.json';
 $isi = file_get_contents($file);
 $data= json_decode($isi,true);
 
@@ -32,7 +32,7 @@ foreach ($data as $key => $val) {
 $json = json_encode($data,JSON_PRETTY_PRINT);
 file_put_contents($file,$json);
 
-$file = '../json/audited_part.json';
+$file = '../../json/audited_part.json';
 $isi = file_get_contents($file);
 $data= json_decode($isi,true);
 
@@ -44,18 +44,18 @@ $json = json_encode($data,JSON_PRETTY_PRINT);
 file_put_contents($file,$json);
 
 
-$file = '../json/part_temp.json';
+$file = '../../json/part_temp.json';
 $isi = file_get_contents($file);
 $data= json_decode($isi,true);
 
 foreach ($data as $key => $val) {
-    array_splice($data,$key,100000);
+    array_splice($data,$key,1000);
 }
 
 $json = json_encode($data,JSON_PRETTY_PRINT);
 file_put_contents($file,$json);
 
-$file = '../json/audit_part.json';
+$file = '../../json/audit_part.json';
 $isi = file_get_contents($file);
 $data= json_decode($isi,true);
 
@@ -65,4 +65,4 @@ foreach ($data as $key => $val) {
 $json = json_encode($data,JSON_PRETTY_PRINT);
 file_put_contents($file,$json);
 
-header('location:../index.php');
+header('location:../../index.php');
